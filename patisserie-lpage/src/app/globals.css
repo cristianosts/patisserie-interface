@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+.bgheader {
+   background: url(../assets/simplebg.jpg);
+}
+
+.bgsession {
+  background: url(../assets/heartbg.jpg);
+}
+
+.bgfooter {
+  background: url(../assets/bg-footer.jpg);
+}
