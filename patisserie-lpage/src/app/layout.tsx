@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Tenor_Sans } from "next/font/google";
 import "./globals.css";
+import { Header } from "../components/header"
 
 const tenor = Tenor_Sans({
   subsets: ["latin"],
@@ -20,8 +21,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${tenor.className}`}
-      >
+        className={`${tenor.className}`}>
+
+          <Header/>
+
         {children}
       </body>
     </html>

@@ -11,3 +11,12 @@
 .bgfooter {
   background: url(../assets/bg-footer.jpg);
 }
+
+
+button:hover {
+  background-color: ;
+  transform: scale(1.2)translateY(-1px);
+  text-shadow: 0 0 25px white,
+               0 0 50px white,
+               0 0 100px white
+}
