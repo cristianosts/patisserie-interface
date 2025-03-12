@@ -5,10 +5,15 @@
    background-repeat: no-repeat;
    background-position: center;
    background-size: cover;
-}
+  }
+  
+  .bgsession {
+    background-image: url(../assets/heartbg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 
-.bgsession {
-  background: url(../assets/heartbg.jpg);
 }
 
 .bgfooter {
@@ -22,4 +27,14 @@ button:hover {
   text-shadow: 0 0 25px white,
                0 0 50px white,
                0 0 100px white
+}
+
+.swipe {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.glass {
+  backdrop-filter: blur(20px);
 }
