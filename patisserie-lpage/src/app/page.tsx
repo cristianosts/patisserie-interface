@@ -10,13 +10,16 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import { foodData } from "@/components/foodData";
+import { Footer } from "@/components/footer";
 
 export default function Home() {
   return (
     <>              
         <SectionIntro/>
         <SectionMeeting/>
-        <SectionFood/>
+        <SectionFood data={foodData}/>
+        <Footer/>
     </>
   );
 }

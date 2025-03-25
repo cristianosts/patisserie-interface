@@ -2,53 +2,84 @@
 import { Container } from "./container"
 // src/components/SwiperClient.tsx
 import React from 'react';
+import { useState, useEffect, useRef } from 'react';
 import  Image  from "next/image";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation } from 'swiper/modules';
+import { Pagination, Navigation, Autoplay, Swiper as SwiperType } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import 'swiper/css/autoplay';
 
-import cbolo from '@/assets/cbolo.jpg';
-import nbolo from '../assets/nbolo.jpg';
-import pbolo from '../assets/pbolo.jpg';
-import caseirinhos from '../assets/caseirinhos.jpg';
-import salgados from '../assets/salgados.jpg';
-import { StaticImageData } from "next/image";
+import { FoodItem, foodData } from "./foodData";
 
 
 interface SwiperClientProps {
-    data: { 
-        id: string; 
-        image: StaticImageData 
-    }[];
+    data: FoodItem[]
 }
 
 export function SectionFood({ data }: SwiperClientProps) {
+    const swiperRef = useRef<SwiperType | null>(null)
+    const [isPlaying, setIsPlaying] = useState(true); // Estado para controlar o autoplay
 
-    var data = [
-        { id: '1', image: cbolo },
-        { id: '2', image: nbolo },
-        { id: '3', image: pbolo },
-        { id: '4', image: caseirinhos },
-        { id: '5', image: salgados },
-    ];
+
+    useEffect(() => {
+        const swiper = swiperRef.current;
+
+        if (swiper) {
+            // Click event on slide
+            swiper.on('click', () => {
+                setIsPlaying(!isPlaying); // Inverts the auto play state
+                if (isPlaying) {
+                    swiper.autoplay.stop();
+                } else {
+                    swiper.autoplay.start();
+                }
+            });
+        }
+    }, [isPlaying]); //state
+
 
     return (
-        <Swiper className="w-full h-[650px] flex-row justify-center items-center bgsession"
+        <Swiper className="w-full h-[700px] flex justify-center items-center bgsession"
             slidesPerView={1}
             pagination={{ clickable: true }}
             navigation={true}
-            modules={[Pagination, Navigation]}
+            modules={[Pagination, Navigation, Autoplay]}
+            autoplay={{ delay: 2500, disableOnInteraction: false }}
+            loop={true}
+            speed={1000}
+            onSwiper={(swiper) => { swiperRef.current = swiper; }}
         >
             {data.map((item) => (
 
-                    <SwiperSlide className=" justify-center"
+                    <SwiperSlide className="justify-center"
                     key={item.id}>
-                        <div className="rounded-4xl w-[800px] h-[600px] border-2 border-pink-400 pt-12 pl-6 mt-6 ml-[270px] glass">
+                        <div className="flex justify-between gap-8 items-center text-2xl   rounded-4xl w-[800px] [600px] pt-12 pl-6 mt-6 ml-[270px] glass">
                             <Image className="rounded-4xl h-[500px]"
                             src={item.image}
                             alt="Item" />
+
+                            <div className="">
+                                <h2 className="text-4xl m-8 font-semibold">{item.title}</h2>
+
+                                <p className="italic text-left m-8">{item.describe}</p>
+
+                                <div className="m-8 text-[16px]">
+
+                                {item.price ? (
+                                        <>
+                                            Preço: <span className="text-5xl">{item.price}</span>
+                                        </>
+                                    ) : (
+                                        <>
+                                            Tamanho P: <span className="text-5xl">{item.price1}</span> <br />
+                                            Tamanho M: <span className="text-5xl">{item.price2}</span> <br />
+                                            Tamanho G: <span className="text-5xl">{item.price3}</span>
+                                        </>
+                                    )}
+                                </div>
+                            </div>
                         </div>
                     </SwiperSlide>
             
