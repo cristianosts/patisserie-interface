@@ -22,6 +22,7 @@ export default function Home() {
         <SectionMeeting/>
         <SectionFood data={foodData}/>
         <Feedback/>
+        <Footer/>
     </>
   );
 }

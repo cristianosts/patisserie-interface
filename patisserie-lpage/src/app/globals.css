@@ -13,11 +13,15 @@
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-
-}
-
-.bgfooter {
-  background: url(../assets/bg-footer.jpg);
+    
+  }
+  
+  .bgfooter {
+    background-image: url(../assets/bg-footer.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 
