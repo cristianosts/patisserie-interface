@@ -1,10 +1,10 @@
 import Image from "next/image"
 import Logo from "@/assets/logotp.png"
-import 'boxicons/css/boxicons.min.css';
+import 'boxicons/css/boxicons.min.css'
 
 
 import { Menu } from "./menu"
-import { Container } from "./container";
+import { Container } from "./container"
 
 export function Header() {
     return (

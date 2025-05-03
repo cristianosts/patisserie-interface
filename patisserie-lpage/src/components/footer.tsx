@@ -1,8 +1,7 @@
 
-
 export function Footer() {
     return (
-        <footer className="text-center w-full py-16 bgheader">
+        <footer className="text-center w-full py-16 bgheader ">
              <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           
@@ -11,15 +10,15 @@ export function Footer() {
             <ul className="space-y-2">
               <li>
                 <i className="bx bxs-map text-xl align-middle mr-2"></i>
-                <span className="align-middle">Endereço: Rua Exemplo, 123 - Cidade, Estado</span>
+                <span className="align-middle">Endereço: Estrada para Salgado, 605 - Lagarto, SE</span>
               </li>
               <li>
                 <i className="bx bxs-phone text-xl align-middle mr-2"></i>
-                <span className="align-middle">Telefone: (XX) XXXX-XXXX</span>
+                <span className="align-middle">Telefone: (79) 99836-2685</span>
               </li>
               <li>
                 <i className="bx bxs-envelope text-xl align-middle mr-2"></i>
-                <span className="align-middle">Email: contato@exemplo.com</span>
+                <span className="align-middle">Email: carol-fontes1912@hotmail.com</span>
               </li>
             </ul>
           </div>
@@ -56,21 +55,23 @@ export function Footer() {
             <div className="flex justify-center space-x-4">
               
                 <button className="transition-[0.3s] ease-in-out">
-                    <a href="#" className="hover:text-gray-300">
+                    <a href="https://www.instagram.com/_delicias.da.carol_?igsh=cmI4d2xkNXRva2lu
+                      " target="_blank" className="hover:text-gray-300">
                       <i className="bx bxl-facebook-circle text-3xl hover:text-pink-600"></i>
                     </a>
                 </button>
               
               
                 <button className="transition-[0.3s] ease-in-out">
-                    <a href="#" className="hover:text-gray-300">
+                    <a href="https://www.instagram.com/_delicias.da.carol_?igsh=cmI4d2xkNXRva2lu
+                      " target="_blank" className="hover:text-gray-300">
                       <i className="bx bxl-instagram-alt text-3xl hover:text-pink-600"></i>
                     </a>
                 </button>
               
             
                 <button className="transition-[0.3s] ease-in-out">
-                    <a href="#" className="hover:text-gray-300">
+                    <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5579998362685" target="_blank" className="hover:text-gray-300">
                       <i className="bx bxl-whatsapp text-3xl hover:text-pink-600"></i>
                     </a>
                 </button>

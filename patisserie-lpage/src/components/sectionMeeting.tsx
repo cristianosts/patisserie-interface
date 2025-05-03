@@ -1,10 +1,10 @@
-"use client";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+"use client"
+import { motion, useInView } from "framer-motion"
+import { useRef } from "react"
 
 export function SectionMeeting() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true })
 
   const textVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -16,7 +16,7 @@ export function SectionMeeting() {
         ease: "easeInOut",
       },
     },
-  };
+  }
 
   return (
     <section className="w-full py-12 bgheader" ref={ref}>
@@ -74,5 +74,5 @@ export function SectionMeeting() {
         </span>
       </article>
     </section>
-  );
+  )
 }
