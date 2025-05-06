@@ -19,7 +19,7 @@ export function SectionMeeting() {
   }
 
   return (
-    <section className="w-full py-12 bgheader" ref={ref}>
+    <section className="w-full py-8 md:py-12 bgheader" ref={ref}>
       <article className="m-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h1
           className="text-5xl text-gray-800 m-8"
