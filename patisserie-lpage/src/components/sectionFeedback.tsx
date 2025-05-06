@@ -8,7 +8,7 @@ export function Feedback() {
     return (
         <section className="w-full py-12 bgheader flex flex-col items-center justify-center">
             
-            <div className='w-full px-35 mt-4'>
+            <div className='w-full pl-8 md:px-35 mt-4'>
                 <h1 className='text-5xl  text-gray-800 mb-8 text-left'>•Nosso Feedback</h1>
             </div>
 

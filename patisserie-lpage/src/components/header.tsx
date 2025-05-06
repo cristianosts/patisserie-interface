@@ -1,25 +1,46 @@
 "use client" 
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Image from "next/image"
 import Logo from "@/assets/logotp.png"
 import 'boxicons/css/boxicons.min.css'
 
 
 import { Menu } from "./menu"
-import { Container } from "./container"
-import { style } from "framer-motion/client"
 
 export function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
+    
+    //Fixing the body overflow when the menu is open
+    useEffect(() => {
+        const body = document.body;
+        const htmlElement = document.documentElement;
+
+        if (isMenuOpen) {
+            
+            body.classList.add('fixed', 'overflow-hidden', 'w-full'); 
+            
+            htmlElement.classList.add('overflow-hidden');
+        } else {
+            
+            body.classList.remove('fixed', 'overflow-hidden', 'w-full');
+            htmlElement.classList.remove('overflow-hidden');
+        }
+
+        //Function to make sure that the classes will be removed if the component is off the screen
+        return () => {
+            body.classList.remove('fixed', 'overflow-hidden', 'w-full');
+            htmlElement.classList.remove('overflow-hidden');
+        };
+    }, [isMenuOpen]); 
 
     return (
        
-        <header className="relative flex items-center w-full h-20 bgheader z-50"> 
-            <Container>
-            <div className="flex flex-1 items-center justify-between">
+        <header className="relative flex justify-between items-center w-full h-20 bgheader z-50 mx-auto px-[15px]"> 
+            
+            <div className="flex flex-1 items-center justify-between mx-8">
                     <div 
                      className="flex items-center gap-14">
                         <Image
@@ -64,16 +85,16 @@ export function Header() {
                 
                 <button
                     onClick={toggleMenu}
-                    className="md:hidden text-white text-3xl z-50  ">
-                    <i className={`bx ${isMenuOpen ? 'bx-x ' : 'bx-menu'}`}></i>
+                    className="md:hidden text-white text-3xl z-50 mx-8">
+                    <i className={`bx ${isMenuOpen ? 'bx-x' : 'bx-menu'}`}></i>
                 </button>
 
-                <div className={`absolute left-0 top-0 w-full overflow-hidden glass text-white md:hidden flex flex-col items-center gap-10 transition-all duration-500 ease-in-out
+                <div className={`absolute left-0 top-0 w-full overflow-hidden glass text-white md:hidden flex flex-col items-center gap-10 transition-all duration-500 ease-in-out 
                             ${isMenuOpen ? 'h-screen opacity-100' : ' opacity-0'}
                         `}
                         style={{transition:"transform 1s ease, opacity 0.8s ease"}}
                         >
-                        <ul className="flex flex-col items-center  mt-25 gap-12 text-2xl ">
+                        <ul className="flex flex-col items-center  mt-24 gap-12 text-2xl">
                             <li><Menu name="Home" /></li>
                             <li><Menu name="Delícias" /></li>
                             <li><Menu name="Orçamentos" /></li>
@@ -85,7 +106,7 @@ export function Header() {
                     </button>
                  </div>
                            
-             </Container>
          </header>
          
     )
+}

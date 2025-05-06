@@ -31,7 +31,7 @@ export function SectionMeeting() {
         </motion.h1>
 
         <motion.p
-          className="text-2xl text-gray-800 m-4 px-12"
+          className="text-2xl text-gray-800 m-4 px-4 md:px-12"
           variants={textVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
@@ -56,7 +56,7 @@ export function SectionMeeting() {
         </motion.h1>
 
         <motion.p
-          className="text-2xl text-gray-800 m-4 px-12"
+          className="text-2xl text-gray-800 m-4 px-4 md:px-12"
           variants={textVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}

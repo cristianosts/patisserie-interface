@@ -8,23 +8,23 @@ import { Container } from "./container"
 
 export function SectionIntro() {
     return (
-        <section className="w-full h-[612px] bgheader">
+        <section className=" w-full md:h-[612px] bgheader overflow-hidden">
             <Container>
-                <div className="flex-1 max-w-[500px]">
-                    <Image className=""
+                <div className=" flex-1 max-w-[500px] mt-8 md:mt-0">
+                    <Image className="pr-6"
                         src={LogoType}
                         alt="Logo Name"
                     />
 
-                    <div className="flex justify-center  gap-8 mt-8 mb-24 ml-8">
-                        <button className="border-2 border-white rounded-xl p-4 cursor-pointer transition-[0.3s] ease-in-out">
-                            <Image className="w-[150px] h-[60px]"
+                    <div className="flex md:flex-col md:items-center lg:flex-row justify-center gap-3 md:gap-8 mt-8 md:m-4 lg:mb-24 md:ml-8">
+                        <button className="border-2 border-white rounded-xl p-2 md:p-4 cursor-pointer transition-[0.3s] ease-in-out shrink-0">
+                            <Image className=" w-[150px] h-[60px]"
                                 src={QueroLogo}
                                 alt="Quero Delivery"
                             />
                         </button>
-                        <button className="border-2 border-white rounded-xl p-4  cursor-pointer  transition-[0.3s] ease-in-out">
-                            <Image className="w-[150px] h-[70px]"
+                        <button className="border-2 border-white rounded-xl p-2 md:p-4  cursor-pointer  transition-[0.3s] ease-in-out shrink-0">
+                            <Image className="w-[150px] h-[60px] "
                                 src={IfoodLogo}
                                 alt="Ifood Delivery"
                             />
@@ -32,7 +32,7 @@ export function SectionIntro() {
                     </div>
                 </div>
 
-                <Image className="mr-20"
+                <Image className="lg:mr-20 "
                     src={CarolImg}
                     alt="Carol Picture"
                 />

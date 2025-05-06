@@ -3,6 +3,7 @@ import React from "react"
 import { useState, useEffect, useRef } from "react";
 import  Image  from "next/image"
 import { Swiper, SwiperSlide } from 'swiper/react'
+import  type { Swiper as SwiperType } from "swiper"
 import { Pagination, Navigation, Autoplay } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/pagination'
@@ -18,7 +19,7 @@ interface SwiperClientProps {
 
 export function SectionFood({ data }: SwiperClientProps) {
     const swiperRef = useRef<SwiperType | null>(null)
-    const [isPlaying, setIsPlaying] = useState(true) // state to autoplay controll
+    const [isPlaying, setIsPlaying] = useState(true)
 
 
     useEffect(() => {
@@ -27,7 +28,8 @@ export function SectionFood({ data }: SwiperClientProps) {
         if (swiper) {
             // Click event on slide
             swiper.on('click', () => {
-                setIsPlaying(!isPlaying) // Inverts the auto play state
+                setIsPlaying(!isPlaying) 
+                // Inverts the auto play state
                 if (isPlaying) {
                     swiper.autoplay.stop()
                 } else {
@@ -42,10 +44,12 @@ export function SectionFood({ data }: SwiperClientProps) {
         <Swiper className="w-full flex justify-center items-center bgsession"
             slidesPerView={1}
             pagination={{ clickable: true }}
-            navigation={true}
+            navigation={false}
             modules={[Pagination, Navigation, Autoplay]}
             autoplay={{ delay: 2500, disableOnInteraction: false }}
             loop={true}
+            observer={true}
+            observeParents={true}
             speed={1000}
             onSwiper={(swiper) => { swiperRef.current = swiper; }}
         >
@@ -53,8 +57,8 @@ export function SectionFood({ data }: SwiperClientProps) {
 
                     <SwiperSlide className="justify-center"
                     key={item.id}>
-                        <div className="flex flex-col md:flex-row justify-between gap-8 items-center text-2xl rounded-4xl w-[90%] md:w-[800px] pt-12 pl-6 mt-6 mx-auto md:ml-auto glass">
-                            <Image className="rounded-4xl h-[500px] md:h-[500px] w-auto"
+                        <div className="flex flex-col md:flex-row justify-between gap-8 items-center text-2xl rounded-4xl w-[90%] md:w-[800px] pt-12 p-4 mt-6 mx-auto md:ml-auto glass">
+                            <Image className="rounded-4xl  md:h-[500px] w-auto  object-cover"
                             src={item.image}
                             alt="Item" />
 
@@ -77,6 +81,16 @@ export function SectionFood({ data }: SwiperClientProps) {
                                         </>
                                     )}
                                 </div>
+
+                                <div className="flex justify-center md:justify-start m-4 md:m-8">
+                                    
+                                    <button className="bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-6 rounded-lg flex items-center gap-2 transition-colors duration-300">
+                                        <i className='bx bxs-shopping-bag-alt text-2xl'></i>
+                                        
+                                    </button>
+
+                                </div>
+
                             </div>
                         </div>
                     </SwiperSlide>
