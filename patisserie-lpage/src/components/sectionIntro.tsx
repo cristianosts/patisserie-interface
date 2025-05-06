@@ -32,7 +32,7 @@ export function SectionIntro() {
                     </div>
                 </div>
 
-                <Image className="lg:mr-20 "
+                <Image className="lg:mr-20 max-w-full h-auto"
                     src={CarolImg}
                     alt="Carol Picture"
                 />

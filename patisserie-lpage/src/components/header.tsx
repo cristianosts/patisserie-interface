@@ -76,7 +76,7 @@ export function Header() {
                 <button className="flex items-center gap-4 text-white font-bold hover: cursor-pointer hover:text-pink-600 h transition-[0.3s] ease-in-out">
 
                 </button>
-                <button className="hidden md:flex items-center gap-4 text-white font-bold hover: cursor-pointer hover:text-pink-600 transition-[0.3s] ease-in-out">
+                <button className="hidden md:flex items-center gap-4 lg:m-8 text-white font-bold hover: cursor-pointer hover:text-pink-600 transition-[0.3s] ease-in-out">
                     <i className='bx bx-store  text-4xl'></i>
                     <span className="hover:border-b-2 hover:border-white">Visite-nos</span>
                     
