@@ -10,7 +10,8 @@ import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 import 'swiper/css/autoplay'
 
-import { FoodItem, foodData } from "./foodData"
+import { FoodItem } from "@/types/foodData"
+
 
 
 interface SwiperClientProps {
