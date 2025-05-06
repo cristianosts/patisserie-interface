@@ -6,14 +6,14 @@ html, body {
 }
 
 .bgheader {
-   background: url(../assets/simplebg.jpg);
+   background: url(../components/assets/simplebg.jpg);
    background-repeat: no-repeat;
    background-position: center;
    background-size: cover;
   }
   
   .bgsession {
-    background-image: url(../assets/heartbg.jpg);
+    background-image: url(../components/assets/heartbg.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -22,7 +22,7 @@ html, body {
   }
   
   .bgfooter {
-    background-image: url(@/assets/heartbg.jpg);
+    background-image: (url(../components/assets/heartbg.jpg));
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -38,7 +38,7 @@ button:hover {
                0 0 100px white
 }
 
-.swipe {
+.swiper {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;

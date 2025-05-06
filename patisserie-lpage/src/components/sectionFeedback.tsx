@@ -1,8 +1,8 @@
 import Image from 'next/image'
-import Coment1 from '@/assets/coments.jpg'
-import Coment2 from '@/assets/coments2.jpg'
-import Coment3 from '@/assets/coments3.jpg'
-import Coment4 from '@/assets/coments4.jpg'
+import Coment1 from '../components/assets/coments.jpg'
+import Coment2 from '../components/assets/coments2.jpg'
+import Coment3 from '../components/assets/coments3.jpg'
+import Coment4 from '../components/assets/coments4.jpg'
 
 export function Feedback() {
     return (

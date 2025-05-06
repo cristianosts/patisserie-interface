@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Image from "next/image"
-import Logo from "@/assets/logotp.png"
+import Logo from "./assets/logotp.png"
 import 'boxicons/css/boxicons.min.css'
 
 

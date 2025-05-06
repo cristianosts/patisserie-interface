@@ -42,7 +42,7 @@ export function SectionFood({ data }: SwiperClientProps) {
 
 
     return (
-        <Swiper className="w-full flex justify-center items-center bgsession"
+        <Swiper className="w-full my-12 flex justify-center items-center bgsession "
             slidesPerView={1}
             pagination={{ clickable: true }}
             navigation={false}
@@ -58,8 +58,8 @@ export function SectionFood({ data }: SwiperClientProps) {
 
                     <SwiperSlide className="justify-center"
                     key={item.id}>
-                        <div className="flex flex-col md:flex-row justify-between gap-8 items-center text-2xl rounded-4xl w-[90%] md:w-[800px] pt-12 p-4 mt-6 mx-auto md:ml-auto glass">
-                            <Image className="rounded-4xl  md:h-[500px] w-auto  object-cover"
+                        <div className="flex flex-col md:flex-row  items-center  text-2xl rounded-4xl w-[90%] md:w-[800px] p-4 mt- mb-4 mx-auto  md:ml-auto  glass">
+                            <Image className="rounded-4xl w-auto md:h-[500] object-cover"
                             src={item.image}
                             alt="Item" />
 
