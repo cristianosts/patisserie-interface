@@ -17,18 +17,25 @@ export function SectionIntro() {
                     />
 
                     <div className="flex md:flex-col md:items-center lg:flex-row justify-center gap-3 md:gap-8 mt-8 md:m-4 lg:mb-24 md:ml-8">
-                        <button className="border-2 border-white rounded-xl p-2 md:p-4 cursor-pointer transition-[0.3s] ease-in-out shrink-0">
-                            <Image className=" w-[150px] h-[60px]"
-                                src={QueroLogo}
-                                alt="Quero Delivery"
-                            /> <a href="https://querodelivery.com/" target="_blank"></a>
-                        </button>
-                        <button className="border-2 border-white rounded-xl p-2 md:p-4  cursor-pointer  transition-[0.3s] ease-in-out shrink-0">
-                            <Image className="w-[150px] h-[60px] "
-                                src={IfoodLogo}
-                                alt="Ifood Delivery"
-                            /> <a href="https://www.ifood.com.br/" target="_blank"></a>
-                        </button>
+
+                            <a href="https://querodelivery.com/" target="_blank">
+                                 <button className="border-2 border-white rounded-xl p-2 md:p-4 cursor-pointer transition-[0.3s] ease-in-out shrink-0">
+                                    <Image className=" w-[150px] h-[60px]"
+                                        src={QueroLogo}
+                                        alt="Quero Delivery"
+                                    />
+                                </button>
+                            </a>
+                               
+                            <a href="https://www.ifood.com.br/" target="_blank">
+                               
+                               <button className="border-2 border-white rounded-xl p-2 md:p-4  cursor-pointer  transition-[0.3s] ease-in-out shrink-0">
+                                  <Image className="w-[150px] h-[60px] "
+                                       src={IfoodLogo}
+                                       alt="Ifood Delivery"
+                                   /> 
+                               </button>
+                            </a>
                     </div>
                 </div>
 
