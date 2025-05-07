@@ -21,13 +21,13 @@ export function SectionIntro() {
                             <Image className=" w-[150px] h-[60px]"
                                 src={QueroLogo}
                                 alt="Quero Delivery"
-                            />
+                            /> <a href="https://querodelivery.com/" target="_blank"></a>
                         </button>
                         <button className="border-2 border-white rounded-xl p-2 md:p-4  cursor-pointer  transition-[0.3s] ease-in-out shrink-0">
                             <Image className="w-[150px] h-[60px] "
                                 src={IfoodLogo}
                                 alt="Ifood Delivery"
-                            />
+                            /> <a href="https://www.ifood.com.br/" target="_blank"></a>
                         </button>
                     </div>
                 </div>
