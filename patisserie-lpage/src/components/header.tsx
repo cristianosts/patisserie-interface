@@ -100,7 +100,7 @@ export function Header() {
                             <li><Menu name="Orçamentos" /></li>
                             <li><Menu name="Contatos" /></li>
                         </ul>
-                    <button className="flex items-center gap-2 m-14 text-white font-bold text-2xl hover:text-pink-600 transition duration-300 ease-in-out mb-6">
+                    <button className="flex items-center gap-2 m-14 text-white font-bold text-2xl hover:text-pink-600 transition duration-300 ease-in-out mb-6 cursor-pointer">
                         <i className='bx bx-store text-4xl'></i>
                         <span className="hover:border-b-2 hover:border-white">Visite-nos</span>
                     </button>
