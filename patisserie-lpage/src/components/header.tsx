@@ -85,7 +85,7 @@ export function Header() {
                 
                 <button
                     onClick={toggleMenu}
-                    className="md:hidden text-white text-3xl z-50 mx-8">
+                    className="md:hidden text-white text-3xl z-50 mx-8 cursor-pointer">
                     <i className={`bx ${isMenuOpen ? 'bx-x' : 'bx-menu'}`}></i>
                 </button>
 
