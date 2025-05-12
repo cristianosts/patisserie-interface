@@ -3,7 +3,7 @@ import LogoType from "./assets/logoname.png"
 import QueroLogo from "./assets/quero.png"
 import IfoodLogo from "./assets/ifoodlogo.png"
 import CarolImg from "./assets/carol.png"
-
+ 
 import { Container } from "./container"
 
 export function SectionIntro() {
