@@ -1,2 +1,3 @@
 # patisserie
- Patisserie landing-page using react/typescript/tailwind
+ Patisserie landing-page using react | next | typescript | tailwindcss
+
